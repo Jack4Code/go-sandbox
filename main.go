@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/Jack4Code/go-internal-tools/throw_away"
 )
@@ -9,6 +10,10 @@ import (
 func main() {
 	err := throw_away.FuncThatMaybeReturnsErr()
 	if err != nil {
-		fmt.Println("An error occurred:", err)
+		if strings.HasPrefix(err.Error(), "an error occurred because r is") {
+			fmt.Println("Error that has dynamic message: ", err)
+		} else {
+			fmt.Println("Error that has static message: ", err)
+		}
 	}
 }
