@@ -4,3 +4,5 @@ github.com/Jack4Code/go-internal-tools v1.1.0 h1:1ml6i1FJbfuIQkH6pctCYnmiRAIJhQ2
 github.com/Jack4Code/go-internal-tools v1.1.0/go.mod h1:KkUWrvdA40R33lkuOELodksju3KxJTlRxImMbG0abjQ=
 github.com/Jack4Code/go-internal-tools v1.2.0 h1:SjRyjohBmmhr5IiJxb/G1mymWoaojA5zJXMgekx/xFs=
 github.com/Jack4Code/go-internal-tools v1.2.0/go.mod h1:KkUWrvdA40R33lkuOELodksju3KxJTlRxImMbG0abjQ=
+github.com/Jack4Code/go-internal-tools v1.2.1 h1:TAQ/gcCRClpsFbNgfYm6hAunVScG16ommJriZgVKRt0=
+github.com/Jack4Code/go-internal-tools v1.2.1/go.mod h1:KkUWrvdA40R33lkuOELodksju3KxJTlRxImMbG0abjQ=
