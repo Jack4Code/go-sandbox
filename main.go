@@ -1,19 +1,22 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"strings"
 
 	"github.com/Jack4Code/go-internal-tools/throw_away"
 )
 
 func main() {
 	err := throw_away.FuncThatMaybeReturnsErr()
-	if err != nil {
-		if strings.HasPrefix(err.Error(), "an error occurred because r is") {
-			fmt.Println("Error that has dynamic message: ", err)
-		} else {
-			fmt.Println("Error that has static message: ", err)
-		}
+	switch {
+	case err == nil:
+		fmt.Println("All good, no error")
+	case errors.Is(err, throw_away.ErrRIs2):
+		fmt.Println("ErrRIs2 occurred, static kind")
+	case errors.Is(err, throw_away.ErrOtherKind):
+		fmt.Println("ErrOtherKind occurred, dynamic kind")
+	default:
+		fmt.Println("An unexpected error occurred:", err)
 	}
 }
